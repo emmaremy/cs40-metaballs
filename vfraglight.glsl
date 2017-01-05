@@ -22,5 +22,5 @@ void main() {
   L = (camera * lightPos).xyz - (modelView * vPosition).xyz;
   E = -(modelView * vPosition).xyz; // from pt to viewer
 
-  gl_Position = projection * modelView * vPosition;
+  gl_Position = projection * modelView * model * vPosition;
 }

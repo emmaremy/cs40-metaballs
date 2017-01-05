@@ -67,10 +67,12 @@ void Grid::draw(QOpenGLShaderProgram *prog) {
   GRIDCELL cell;
   TRIANGLE celltriangles[5];
   int ncelltriangles;
+  bool nearBlob;
 
   for(int i=0; i<m_width; i++){
     for(int j=0; j<m_height; j++){
       for(int k=0; k<m_depth; k++){
+        nearBlob = false;
 
         //initialize cell (.p has vertex coords and .val has min distances)
         cell.p[0] = vec3(i,j,k);
@@ -97,6 +99,14 @@ void Grid::draw(QOpenGLShaderProgram *prog) {
               cell.val[l] = dist;
             }
           }
+          if (cell.val[l] < m_threshold){
+            nearBlob = true;
+          }
+        }
+
+        //no need to try to find triangles if no vertex is near a blob
+        if (!nearBlob){
+          continue;
         }
 
         ncelltriangles = cs40::polygonise(cell, m_threshold, celltriangles);
