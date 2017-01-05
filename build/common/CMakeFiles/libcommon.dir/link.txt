@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblibcommon.a  CMakeFiles/libcommon.dir/sphere.cpp.o CMakeFiles/libcommon.dir/square.cpp.o CMakeFiles/libcommon.dir/blob.cpp.o CMakeFiles/libcommon.dir/cylinder.cpp.o CMakeFiles/libcommon.dir/matrixstack.cpp.o CMakeFiles/libcommon.dir/marchingcubes.cpp.o CMakeFiles/libcommon.dir/grid.cpp.o
-/usr/bin/ranlib liblibcommon.a
