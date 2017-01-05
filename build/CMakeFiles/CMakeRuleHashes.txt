@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+491ed01fcf91347777b32db2ee0448da moc_mainwindow.cpp
+95084f7f19ea5391c179524c9da938aa moc_mypanelopengl.cpp
+23c01cc3b99c6ba9f0284d70477f413a ui_mainwindow.h
